@@ -12,10 +12,6 @@
 
 /* 1.3 Select all rows in weather that have both a recorded sunrise time and a sunset time. */
 
-SELECT *
-FROM walmart.weather
-WHERE sunrise IS NOT NULL AND sunset IS NOT NULL;
-
 
 /* PART 2: Aggregate Functions*/
 
@@ -45,10 +41,6 @@ WHERE sunrise IS NOT NULL AND sunset IS NOT NULL;
 
 /* 3.1 What is the total precipitation for the month of January in 2013 for all stations? */
 
-SELECT SUM(preciptotal), station_nbr
-FROM walmart.weather
-WHERE `date` BETWEEN '2013-01-01' AND '2013-01-31'
-GROUP BY station_nbr;
 /* 
 3.2 For station 2, in the year of 2012, what was the highest total precipitation over a single month?
     HINT: Use the function MONTH. Example: MONTH('2012-02-01') = 2
